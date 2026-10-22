@@ -1,0 +1,265 @@
+:root {
+    color-scheme: light;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #172033;
+    background: #f5f7fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 12% 8%, rgba(99, 102, 241, 0.09), transparent 32rem),
+        #f5f7fb;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.page {
+    display: grid;
+    min-height: 100vh;
+    align-content: center;
+    justify-items: center;
+    padding: 48px 20px 28px;
+}
+
+.email-card {
+    width: min(100%, 620px);
+    padding: 40px;
+    border: 1px solid #e7eaf1;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 24px 70px rgba(28, 39, 68, 0.09);
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.icon-wrap {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 16px;
+    background: #eef0ff;
+    color: #5857d5;
+}
+
+.icon-wrap svg {
+    width: 27px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+.eyebrow {
+    margin: 0 0 5px;
+    color: #6564d8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(24px, 5vw, 30px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.intro {
+    margin: 8px 0 0;
+    color: #778096;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin-bottom: 27px;
+    padding: 13px 15px;
+    border: 1px solid #e6e8ff;
+    border-radius: 12px;
+    background: #f7f7ff;
+}
+
+.notice-dot {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 auto;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: #6968df;
+}
+
+.notice p {
+    margin: 0;
+    color: #535b76;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+.field {
+    display: grid;
+    gap: 8px;
+}
+
+label {
+    color: #30394d;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #dfe3ec;
+    border-radius: 11px;
+    outline: none;
+    background: #fff;
+    color: #172033;
+    font-size: 14px;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input {
+    height: 48px;
+    padding: 0 14px;
+}
+
+textarea {
+    min-height: 142px;
+    padding: 13px 14px;
+    line-height: 1.8;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a0a7b6;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #7775e5;
+    box-shadow: 0 0 0 4px rgba(105, 104, 223, 0.12);
+}
+
+.field-hint {
+    color: #8b93a5;
+    font-size: 11px;
+}
+
+.submit-button {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2px;
+    border: 0;
+    border-radius: 11px;
+    background: #5b5ad6;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 160ms ease, transform 160ms ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-1px);
+    background: #4948c3;
+}
+
+.submit-button:disabled {
+    transform: none;
+    background: #9999d9;
+    cursor: wait;
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid rgba(91, 90, 214, 0.35);
+    outline-offset: 3px;
+}
+
+.submit-button svg {
+    width: 18px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.form-status {
+    display: none;
+    margin: -7px 0 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #f0f7f3;
+    color: #286344;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.form-status.is-visible {
+    display: block;
+}
+
+.form-status.is-error {
+    background: #fff1f0;
+    color: #9f3028;
+}
+
+.page-caption {
+    margin: 20px 0 0;
+    color: #939bad;
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (max-width: 540px) {
+    .page {
+        padding: 24px 14px;
+    }
+
+    .email-card {
+        padding: 26px 20px;
+        border-radius: 18px;
+    }
+
+    .card-header {
+        gap: 13px;
+    }
+
+    .icon-wrap {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+    }
+}

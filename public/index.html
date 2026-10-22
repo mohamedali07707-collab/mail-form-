@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>إرسال رسالة بريد إلكتروني</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="email-card" aria-labelledby="page-title">
+            <header class="card-header">
+                <div class="icon-wrap" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M3.75 6.75h16.5v10.5H3.75z"></path>
+                        <path d="m4.5 7.5 7.5 6 7.5-6"></path>
+                    </svg>
+                </div>
+                <div>
+                    <p class="eyebrow">نموذج البريد الإلكتروني</p>
+                    <h1 id="page-title">أرسل رسالة</h1>
+                    <p class="intro">اكتب عنوان الرسالة ومحتواها، وسنتولى إيصالها.</p>
+                </div>
+            </header>
+
+            <div class="notice" role="note">
+                <span class="notice-dot" aria-hidden="true"></span>
+                <p>ستُرسل الرسالة إلى البريد المحدد في إعدادات الخادم.</p>
+            </div>
+
+            <form id="email-form">
+                <div class="field">
+                    <label for="email">بريدك الإلكتروني</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        inputmode="email"
+                        placeholder="name@example.com"
+                        autocomplete="email"
+                        maxlength="254"
+                        required
+                    >
+                    <span class="field-hint">سنستخدمه للرد عليك، ولن يكون عنوان المستلم.</span>
+                </div>
+
+                <div class="field">
+                    <label for="subject">عنوان الرسالة</label>
+                    <input
+                        id="subject"
+                        name="subject"
+                        type="text"
+                        placeholder="اكتب عنوان الرسالة"
+                        maxlength="120"
+                        autocomplete="off"
+                        required
+                    >
+                </div>
+
+                <div class="field">
+                    <label for="message">نص الرسالة</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="اكتب رسالتك هنا..."
+                        maxlength="5000"
+                        required
+                    ></textarea>
+                    <span class="field-hint">الحد الأقصى 5000 حرف.</span>
+                </div>
+
+                <button class="submit-button" type="submit">
+                    <span>إرسال الرسالة</span>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 12h14M13 6l6 6-6 6"></path>
+                    </svg>
+                </button>
+                <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+        <p class="page-caption">لا تشارك معلومات حساسة عبر هذا النموذج.</p>
+    </main>
+</body>
+</html>
